@@ -9,21 +9,21 @@
 
 /**
  * struct flags - struct containing flags
- * @Plus: + flag specifier
- * @Space: ' ' flag specifier
- * @Hash: # flag specifier
+ * @plus: + flag specifier
+ * @space: ' ' flag specifier
+ * @hash: # flag specifier
  */
 typedef struct flags
 {
-	int Plus;
-	int Space;
-	int Hash;
+	int plus;
+	int space;
+	int hash;
 } flags_t;
 
 /**
  * struct printHandler - choose right function
  * @c: format specifier
- * @f: pointer to printing function
+ * @m: pointer to printing function
  */
 typedef struct printHandler
 {
@@ -44,7 +44,7 @@ int print_binary(va_list p, flags_t *m);
 int print_octal(va_list p, flags_t *m);
 
 /* converter */
-char *convert(unsigned long int num, int base, int lowercase);
+char *convert(unsigned long int num, int base, int lowercases);
 
 /* _printf */
 int _printf(const char *format, ...);
