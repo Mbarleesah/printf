@@ -43,11 +43,7 @@ int print_hex_big(va_list p, flags_t *m);
 int print_binary(va_list p, flags_t *m);
 int print_octal(va_list p, flags_t *m);
 
-<<<<<<< HEAD
-/* convert */
-=======
 /* converted */
->>>>>>> 4627dec9e29ff4c1d2232073e02b1b60a16e7e72
 char *convert(unsigned long int num, int base, int lowercases);
 
 /* PRINTf */
@@ -67,7 +63,7 @@ int print_char(va_list p, flags_t *m);
 int _putchar(char c);
 int _puts(char *str);
 
-/* other */
+/* utility */
 int print_rot13(va_list p, flags_t *m);
 int print_rev(va_list p, flags_t *m);
 int print_bigS(va_list p, flags_t *m);
