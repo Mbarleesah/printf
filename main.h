@@ -43,19 +43,19 @@ int print_hex_big(va_list p, flags_t *m);
 int print_binary(va_list p, flags_t *m);
 int print_octal(va_list p, flags_t *m);
 
-/* converter */
+/* converted */
 char *convert(unsigned long int num, int base, int lowercases);
 
-/* _printf */
+/* PRINTf */
 int _printf(const char *format, ...);
 
-/* print */
+/* printing */
 int (*get_print(char s))(va_list, flags_t *m);
 
 /* flag */
 int get_flag(char s, flags_t *m);
 
-/* alpha */
+/* alphate */
 int print_string(va_list p, flags_t *m);
 int print_char(va_list p, flags_t *m);
 
