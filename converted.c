@@ -10,9 +10,9 @@
  */
 char *convert(unsigned long int num, int base, int lowercases)
 {
-static char *preview
+static char *preview;
 static char buffer[50];
-char *str
+char *str;
 
 preview = (lowercases)
 ? "012345679abcdef"
@@ -23,6 +23,6 @@ do {
 *--str = preview[num % base];
 num /= base;
 }
-whle (num != 0);
+while (num != 0);
 return (str);
 }
