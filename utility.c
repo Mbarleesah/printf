@@ -73,7 +73,7 @@ int print_rot13(va_list p, flags_t *m)
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *t = va_arg(p, char *);
 
-	(void)f;
+	(void)m;
 	for (l = 0; t[l]; l++)
 	{
 		if (t[l] < 'A' || (t[l] > 'Z' && t[l] < 'a') || t[l] > 'z')
