@@ -11,7 +11,7 @@ int print_bigS(va_list p, flags_t *m)
 {
 	int h, found = 0;
 	char *salt;
-	char *g = va_arg(y, char *);
+	char *g = va_arg(p, char *);
 
 	(void)m;
 	if (!g)
@@ -46,7 +46,7 @@ int print_rev(va_list p, flags_t *m)
 	int t = 0, u;
 	char *g = va_arg(p, char *);
 
-	(void)f;
+	(void)m;
 	if (!g)
 		g = "(null)";
 
@@ -68,27 +68,27 @@ int print_rev(va_list p, flags_t *m)
  */
 int print_rot13(va_list p, flags_t *m)
 {
-	int o, p;
+	int o, l;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *t = va_arg(p, char *);
 
 	(void)m;
-	for (p = 0; t[p]; p++)
+	for (l = 0; [l]; l++)
 	{
-		if (t[p] < 'A' || (t[p] > 'Z' && t[p] < 'a') || t[p] > 'z')
-			_putchar(t[p]);
+		if (t[l] < 'A' || (t[l] > 'Z' && t[l] < 'a') || t[l] > 'z')
+			_putchar(t[l]);
 		else
 		{
 			for (o = 0; o <= 52; o++)
 			{
-				if (t[p] == rot13[o])
+				if (t[l] == rot13[o])
 					_putchar(ROT13[o]);
 			}
 		}
 	}
 
-	return (p);
+	return (l);
 }
 
 /**
