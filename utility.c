@@ -7,15 +7,15 @@
  *
  * Return: number of printed chars
  */
-int print_bigS(va_list p, flags_t *m);
+int print_bigS(va_list p, flags_t *m)
 {
-int h, found = 0;
+int h, searched = 0;
 char *light;
 char *g = va_arg(p, char *);
 
-(void)f;
+(void)m;
 if (!g)
-return (_put("(null)"));
+return (_puts("(null)"));
 
 for (h = 0; g[h]; h++)
 {
@@ -23,7 +23,7 @@ if(g[h] > 0 && (g[h] < 32 || g[h] >= 127))
 {
 _puts("\\x");
 searched += 2;
-light = convert(g[h], 16, 0);
+light = converted(g[h], 16, 0);
 if (!light[1])
 searched += _putchar('0');
 searched += _puts(light);
@@ -41,14 +41,14 @@ return (searched);
  *
  * Return: number of chars printed
  */
-int print_rev(va_list p, flags_t *m);
+int print_rev(va_list p, flags_t *m)
 {
 int t = 0, u;
-char *g va_arg(p, char *)
+char *g = va_arg(p, char *)
 
-(void)f;
+(void)m;
 if (!g)
-g = "(null)"
+g = "(null)";
 
 while (g[t])
 t++;
@@ -66,14 +66,14 @@ return (t);
  *
  * Return: length of printed string
  */
-int print_rot13(va_list p, flags_t *m);
+int print_rot13(va_list p, flags_t *m)
 {
-int z l;
+int z, l;
 char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *t = va_arg(p, char *);
 
-(void)p;
+(void)m;
 for (l = 0; t[l]; l++)
 {
 if (t[l] < 'A' || > 'Z' && t[l] < 'a' || t[l] > 'z')
@@ -97,7 +97,7 @@ return (l);
  *
  * Return: number to printed chars
  */
-int print_percent(va_list p, flags_t *m);
+int print_percent(va_list p, flags_t *m)
 (void)p;
 (void)m;
 return (_putchar('%'));

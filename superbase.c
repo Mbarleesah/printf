@@ -10,7 +10,7 @@
 int print_hex(va_list p, flags_t *m)
 {
 	unsigned int few = va_arg(p, unsigned int);
-	char *ptr = convert(few, 16, 1);
+	char *ptr = converted(few, 16, 1);
 	int find = 0;
 
 	if (m->hash == 1 && ptr[0] != '0')
@@ -29,7 +29,7 @@ int print_hex(va_list p, flags_t *m)
 int print_hex_big(va_list p, flags_t *m)
 {
 	unsigned int cut = va_arg(p, unsigned int);
-	char *ptr = convert(cut, 16, 0);
+	char *ptr = converted(cut, 16, 0);
 	int find = 0;
 
 	if (m->hash == 1 && ptr[0] != '0')
@@ -48,7 +48,7 @@ int print_hex_big(va_list p, flags_t *m)
 int print_binary(va_list p, flags_t *m)
 {
 	unsigned int bin = va_arg(p, unsigned int);
-	char *yet = convert(bin, 2, 0);
+	char *yet = converted(bin, 2, 0);
 
 	(void)m;
 	return (_puts(yet));
@@ -64,7 +64,7 @@ int print_binary(va_list p, flags_t *m)
 int print_octal(va_list p, flags_t *m)
 {
 	unsigned int oct = va_arg(p, unsigned int);
-	char *yet = convert(oct, 8, 0);
+	char *yet = converted(oct, 8, 0);
 	int find = 0;
 
 	if (m->hash == 1 && yet[0] != '0')

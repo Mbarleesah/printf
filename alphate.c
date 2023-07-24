@@ -19,14 +19,14 @@ return (_puts(a));
 
 /**
  * print_char - print a char
- * @v: va_list argument from _printf
+ * @p: va_list argument from _printf
  * @m: pointer to struct flags
  *
  * Return: number of printed chars
  */
-int print_char(va_list p, flags_t *m);
+int print_char(va_list p, flags_t *m)
 {
 (void)m;
 _putchar(va_arg(p, int));
-return (v);
+return (p);
 }

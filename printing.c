@@ -6,9 +6,9 @@
  *
  * Return: pointer to matching print function
  */
-int (*get_print(char s))(va_list, flags_t *m);
+int (*get_print(char s))(va_list, flags_t *m)
 {
-_func_arr[] = {
+as _func_arr[] = {
 {'b', print_binary},
 {'c', print_char},
 {'d', print_int},
