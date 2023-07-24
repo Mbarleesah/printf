@@ -28,5 +28,5 @@ int print_char(va_list p, flags_t *m)
 {
 (void)m;
 _putchar(va_arg(p, int));
-return (p);
+return (1);
 }

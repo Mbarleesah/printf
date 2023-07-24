@@ -44,11 +44,8 @@ int print_binary(va_list p, flags_t *m);
 int print_octal(va_list p, flags_t *m);
 
 /* converted */
-<<<<<<< HEAD
 char *converted(unsigned long int num, int base, int lowercases);
-=======
-char *convert(unsigned long int num, int base, int lowercases);
->>>>>>> 8c7b460c6bfe092942ef71d713a1e8647748b1c8
+
 
 /* PRINTf */
 int _printf(const char *format, ...);
