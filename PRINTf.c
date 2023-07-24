@@ -8,10 +8,10 @@
  *
  * Return: length of formatted output string
  */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 int (*bfunc)(va_list, flags_t *);
-const char *v
+const char *v;
 va_list commence;
 flags_t flags = {0, 0, 0};
 
@@ -34,7 +34,7 @@ continue;
 }
 while (get_flag(*v, &flags))
 v++;
-bfunc = get_print(*v)
+bfunc = get_print(*v);
 search += (bfunc)
 ? bfunc(commence, &flags)
 : _printf("%%%c", *v);

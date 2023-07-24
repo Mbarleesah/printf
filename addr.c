@@ -18,7 +18,7 @@ int print_address(va_list p, flags_t *m)
 
 	if (!t)
 		return (_puts("(nil)"));
-	ptr = convert(t, 16, 1);
+	ptr = converted(t, 16, 1);
 	find += _puts("0x");
 	find += _puts(ptr);
 	return (find);
