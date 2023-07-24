@@ -29,7 +29,7 @@ int print_int(va_list p, flags_t *m)
  *
  * Return: number of chars printed
  */
-int print_unsigned(va_list y, flags_t *m)
+int print_unsigned(va_list p, flags_t *m)
 {
 	unsigned int ui = va_arg(p, unsigned int);
 	char *next = convert(ui, 10, 0);
