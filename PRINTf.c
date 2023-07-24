@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * PRINTf - prints output according to a format
+ * _printf - prints output according to a format
  * @format: format string
  *
  * Return: length of formatted output string
