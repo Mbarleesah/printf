@@ -8,7 +8,7 @@
  *
  * Return: result string
  */
-char *convert(unsigned long int num, int base, int lowercases)
+char *converted(unsigned long int num, int base, int lowercases)
 {
 	static char *view;
 	static char buffer[50];
