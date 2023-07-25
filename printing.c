@@ -27,8 +27,7 @@ as _func_arr[] = {
 int flags = 14;
 
 register int e;
-
-for ( e = 0; e < flags; e++)
+for (e = 0; e < flags; e++)
 if (_func_arr[e].c == s)
 return (_func_arr[e].m);
 return (NULL);

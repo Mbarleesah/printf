@@ -11,8 +11,7 @@ int print_string(va_list p, flags_t *m)
 {
 char *a = va_arg(p, char *);
 (void)m;
-
-if(!a)
+if (!a)
 a = "(null)";
 return (_puts(a));
 }
