@@ -2,7 +2,7 @@
 
 /**
  * print_int - prints an integer
- * @p: va_list arguments
+ * @p: va_list argument
  * @m: pointer to struct
  *
  * Return: number of printed char
