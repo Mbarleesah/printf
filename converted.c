@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert - converts number and base to string
+ * converted - converts number and base to string
  * @num: input
  * @base: input
  * @lowercases: lowercase value
